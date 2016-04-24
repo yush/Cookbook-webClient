@@ -1,0 +1,16 @@
+<div ng-controller="SidebarCtrl">
+  <a ui-sref="logout">logout</a>
+  <a ui-sref="layout.newRecette">ajouter</a>
+  <h2>Liste des recettes</h2>
+  <label>Recherche: <input ng-model="searchText"></label>
+  <ul class="list-group">
+    <li ng-repeat="categorie in categories" class="list-group-item">
+        {{categorie.nom}}<span class="badge">{{ categorie.recettes.length }}</span>
+      <ul>
+          <li ng-repeat="recette in categorie.recettes | filter: {Name:searchText}" class="list-unstyled">
+              <a ui-sref="layout.view({id: recette.ID})">{{recette.Name}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="well center-block" ng-controller="LoginCtrl">
+  <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+          <h1>Connexion</h1>
+          <form class="form-signin">
+            <div class="form-group">
+                <label for="username">Utilisateur</label>
+                <input type="text" id="username" placeholder="Utilisateur" value="" autofocus ng-model="conn.email">
+            </div>
+            <div>
+                <label for="pass">Utilisateur</label>
+                <input type="password" id="pass" placeholder="mot de passe" value="" ng-model="conn.password"/>
+            </div>
+            <div ng-show="error" class="alert alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Error!</strong> {{error}}
+            </div>
+            <button class="btn btn-primary" type="button" ng-click="signIn()">Sign in</button>
+          </form>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+<div ng-controller="RecetteCtrl">
+    <h1>{{recette.Name}}</h1>
+    <div class="col-8">
+        <a ui-sref="fullscreen.view({id: recette.ID, idCat: recette.Categorie})" class="thumbnail"><img src="/{{ urlRecette }}" class="img-responsive" /></a>
+    </div>
+</div>

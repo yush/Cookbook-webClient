@@ -1,0 +1,14 @@
+/* app css stylesheet */
+
+body {
+    font-size: 1.6em;
+}
+
+h4 {
+    color: #ce4844;
+}
+
+.badge {
+    font-size: 1.2em;
+    background-color: #ce4844;
+}

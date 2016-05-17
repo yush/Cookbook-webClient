@@ -1,5 +1,11 @@
 <div ng-controller="RecetteCtrl">
-    <h1>{{recette.Name}}</h1>
+    <input type="text" ng-model="recette.Name"></input>   
+    <label for="categorieSelect"> Catégorie: </label>
+    <select name="categorieSelect" id="categorieSelect" ng-model="recette.Categorie">
+      <option ng-repeat="categorie in dataCategories.list" value="{{categorie.ID}}">{{categorie.name}}</option>
+    </select>     
+    <button ng-click="update(recette)">Modifier</button>
+    <button ng-click="deleteRecette(recette.ID)">Supprimer</button>
     <div class="col-8">
         <a ui-sref="fullscreen.view({id: recette.ID, idCat: recette.Categorie})" class="thumbnail"><img src="/{{ urlRecette }}" class="img-responsive" /></a>
     </div>

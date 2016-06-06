@@ -19,7 +19,6 @@
 	    <select name="categorieSelect" id="categorieSelect" ng-model="dataCategories.categorieSelect">
 	      <option ng-repeat="categorie in dataCategories.list" value="{{categorie.ID}}">{{ categorie.name }}</option>
 	    </select>	    
-	    	<p>cat: {{dataCategories.categorieSelect}}</p>
 			<p>Nombre de recettes à envoyer: {{ uploader.queue.length }}</p>
 		</div>
 	</div>
@@ -87,7 +86,7 @@
 					</div>
 				</div>
 				<button type="button" class="btn btn-success btn-s"
-					ng-click="uploader.uploadAll()"
+					ng-click="uploadAll()"
 					ng-disabled="!uploader.getNotUploadedItems().length">
 					<span class="glyphicon glyphicon-upload"></span> Envoyer tout
 				</button>

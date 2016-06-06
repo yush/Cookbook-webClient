@@ -341,8 +341,8 @@ app
 							reload : true
 						});
 					};
-
-					$scope.upload = function(it) {
+					
+					function uploadItem(it) {
 						synConn.getUrlSign('root/Recette/newRecette/',
 								function(err, url) {
 									it.url = url;
@@ -351,6 +351,19 @@ app
 									});
 									it.upload();
 								});
+						
+					} 
+					
+					
+					$scope.upload = function(it) {
+						uploadItem(it);
+					};
+					
+					$scope.uploadAll = function() {
+						var list = uploader.queue;
+						list.map(function(it) {
+							uploadItem(it);
+						});
 					};
 
 				})

@@ -1,10 +1,11 @@
 <div ng-controller="SidebarCtrl">
 	<ul class="list-group list-unstyled ">
 		<li><a ui-sref="logout">logout</a></li>
+		<!-- 
 		<li><label><span class="glyphicon glyphicon-search"></span>
 				<input ng-model="searchText"> </label></li>
+		 -->
 		<li><a ui-sref="layout.newRecette">Ajouter une recette</a></li>
-		<li>test</li>
 		<ul class="list-group">
 			<li ng-repeat="categorie in categories" class="list-group-item">
 				<a ui-sref="layout.categoriesDetails({idCat: categorie.ID})">{{categorie.name}}</a>			
